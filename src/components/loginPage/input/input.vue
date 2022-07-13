@@ -1,7 +1,7 @@
 <template>
 <div>
     <label>{{label}}</label>
-    <input :placeholder="inputName" />
+    <input :type="inputType" :placeholder="inputName" />
 </div>
 </template>
 
@@ -11,6 +11,7 @@ export default{
     props: {
         inputName: String,
         label: String,
+        inputType: String,
     },
 }
 </script>
@@ -19,15 +20,22 @@ export default{
 div{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    gap: 10px;
     padding: 10px;
 }
+
+label{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
 input{
     border: 0;
     border-bottom: 1px solid black;
     background-color: transparent;
-}
-input:selector{
-    
+    min-width: 150px;
+    width: 25vw;
+    height: 2vw;
 }
 </style>
