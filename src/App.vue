@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <navbar />
+  <homepage />
 </template>
 
 <style>
