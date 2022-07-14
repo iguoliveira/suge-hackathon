@@ -1,16 +1,18 @@
 <script>
 import loginPage from './components/loginPage/loginPage.vue'
+import homepage from './components/homepage/homepage.vue'
+import navbar from './components/navbar/navbar.vue'
 
 export default {
   name: 'App',
   components: {
-    loginPage,
+    loginPage, homepage, navbar,
   }
 }
 </script>
 
 <template>
-  <loginPage />
+  <navbar />
 </template>
 
 <style>
