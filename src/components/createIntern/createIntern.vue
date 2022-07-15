@@ -1,7 +1,7 @@
 <template>
   <form>
     <label>Intern Name:</label>
-    <input type="text" name="name" required />
+    <input v-model="name" type="text" name="name" required />
     <label>Course:</label>
     <input type="text" name="course" required />
     <label>EDV::</label>
@@ -22,6 +22,7 @@
 import { addDoc, collection, getFirestore } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js';
 import { firebaseConfig } from './../../firebase'
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js'
+import { name, edv, course, gb, bu, periodOfInternship, coordinatorOfInternship } from './../global-items/inputData/input'
 console.log(firebaseConfig)
 const firebaseApp = initializeApp(firebaseConfig)
 const db = getFirestore(firebaseApp)
@@ -29,13 +30,13 @@ const db = getFirestore(firebaseApp)
 const colRef = collection(db, 'collaborators');
 
     addDoc(colRef, {
-      name: "sus",
-      course: "sus",
-      edv: "sus",
-      gb: "sus",
-      bu: "sus",
-      periodOfInternship: "sus",
-      coordinatorOfInternship: "sus"})
+      name: name,
+      course: course,
+      edv: edv,
+      gb: gb,
+      bu: bu,
+      periodOfInternship: periodOfInternship,
+      coordinatorOfInternship: coordinatorOfInternship})
 
     // const onSubmit = async () => {
     //   await createUser({ ...form });
