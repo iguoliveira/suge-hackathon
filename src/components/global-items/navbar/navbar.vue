@@ -30,11 +30,10 @@ export default {
 
 <style scoped>
 .navbar-container {
+  background-color: white;
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  margin-left: 1vw;
-  margin-right: 1vw;
 }
 
 .navbar-links {

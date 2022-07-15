@@ -7,7 +7,7 @@
 <script>
 export default {
   name: "sugeLogo",
-};
+}
 </script>
 
 <style scoped>

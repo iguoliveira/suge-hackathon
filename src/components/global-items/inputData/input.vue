@@ -18,6 +18,18 @@ export default{
         inputType: String,
         modelValue: String,
     },
+    data(){
+        return{
+            name: '',
+            edv: '',
+            course: '',
+            gb: '',
+            bu: '',
+            periodOfInternship: '',
+            coordinatorOfInternship: '',
+
+        }
+    },
     emits: ['update:modelValue']
     
 }
