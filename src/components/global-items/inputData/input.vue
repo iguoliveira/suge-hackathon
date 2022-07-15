@@ -1,18 +1,25 @@
 <template>
 <div>
     <label>{{label}}</label>
-    <input :type="inputType" :placeholder="inputName"/>
+    <input
+        :value="modelValue"
+        @input="$emit('update:modelValue', $event.target.value)"
+        :type="inputType" :placeholder="inputName"/>
 </div>
+    
 </template>
 
 <script>
 export default{
     name: 'inputData',
     props: {
-        inputName: String,
+        inputName: String,            
         label: String,
         inputType: String,
+        modelValue: String,
     },
+    emits: ['update:modelValue']
+    
 }
 </script>
 
