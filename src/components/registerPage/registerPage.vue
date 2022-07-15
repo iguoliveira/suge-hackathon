@@ -5,6 +5,11 @@ import isAccountCreated from './buttonData/already.vue'
 
 export default {
     el: "#app", 
+    data() {
+        return{
+             name: ""
+        }
+    },
     name: "registerPage",
     components: {
         inputData, buttonData, isAccountCreated
@@ -17,8 +22,9 @@ export default {
     <div className="all-space-available">
         <img src="bosch-imgs/bosch-red-logo.png" className="bosch-logo" />
         <div className="register-elements-area">
+
             <div className="inputs-area">
-                <inputData label="NAME" inputType="text" inputName="Insert your Name" />
+                <inputData v-model="name" label="NAME" inputType="text" inputName="Insert your Name"  />
                 <inputData label="EDV" inputType="text" inputName="Insert your EDV" />
                 <inputData label="Password" inputType="password" inputName="Insert your Password" />
                 <inputData label="Confirm Password" inputType="password" inputName="Confirm your Password" />
@@ -26,6 +32,7 @@ export default {
                 <inputData label="GB" inputType="text" inputName="Insert GB" />
                 <inputData label="BU" inputType="text" inputName="Insert BU" />    
             </div>
+            <p>{{name}}</p>
             <div className="buttons-area">
                 <buttonData btnName="Register" />
             </div>
