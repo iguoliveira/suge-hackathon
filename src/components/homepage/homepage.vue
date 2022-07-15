@@ -7,7 +7,7 @@
 
 <script>
 import boschLine from "../global-items/boschFade.vue";
-import navbar from "../navbar/navbar.vue";
+import navbar from "../global-items/navbar/navbar.vue";
 
 export default {
   name: "homepage",

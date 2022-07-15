@@ -15,8 +15,8 @@
 
 <script>
 import navbarLinks from "./navbarLinks/navbarLinks.vue";
-import boschLogo from "../global-items/boschLogo.vue";
-import sugeLogo from "../global-items/sugeLogo.vue";
+import boschLogo from "../boschLogo.vue";
+import sugeLogo from "../sugeLogo.vue";
 
 export default {
   name: "navbar",

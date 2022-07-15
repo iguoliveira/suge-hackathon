@@ -17,16 +17,16 @@
         <buttonData btnName="Sign Up" />
       </div>
 
-      <forgotPassword />
+      <textLink text="Forgot password?" />
       
     </div>
   </div>
 </template>
 
 <script>
-import inputData from "./input/input.vue";
-import buttonData from "./button/button.vue";
-import forgotPassword from "./button/forgotPassword.vue";
+import inputData from "../global-items/inputData/input.vue"
+import buttonData from "../global-items/buttonData/button.vue";
+import textLink from "../global-items/buttonData/textLink.vue";
 import boschLogo from "../global-items/boschLogo.vue";
 import boschLine from "../global-items/boschFade.vue";
 import sugeLogo from "../global-items/sugeLogo.vue";
@@ -36,7 +36,7 @@ export default {
   components: {
     inputData,
     buttonData,
-    forgotPassword,
+    textLink,
     boschLogo,
     boschLine,
     sugeLogo,
@@ -61,14 +61,15 @@ export default {
 }
 
 .login-elements-area {
-  align-self: center;
-  background-color: #ebe6e6;
-  padding: 80px 40px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+    align-self: center;
+    background-color: #f8f8f8;
+    box-shadow: black;
+    padding: 50px 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
 .inputs-area {

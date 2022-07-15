@@ -1,16 +1,20 @@
 <template>
-    <div>Forgot password? <a>Click here</a></div>
+    <div>{{ text }} <a>Click here</a></div>
 </template>
 
 <script>
 export default{
-    name: 'forgotPassword',
+    name: 'textLink',
+    props: {
+        text: String,
+    }
 }
 </script>
 
 <style scoped>
 div{
     font-size: 0.8em;
+    color: #007BC0;
 }
 
 div a{
@@ -18,7 +22,7 @@ div a{
 }
 
 div a:hover{
-    color: rgb(102, 102, 102);
+    color: rgb(0, 86, 145);
     transition: 200ms;
 }
 </style>
