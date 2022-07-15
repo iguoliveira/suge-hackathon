@@ -7,13 +7,8 @@ import boschLogo from '../global-items/boschLogo.vue'
 import sugeLogo from '../global-items/sugeLogo.vue'
 
 export default {
-<<<<<<< HEAD
     el: "#app",
         data() {
-=======
-    el: "#app", 
-    data() {
->>>>>>> 7ed9182d5682ebf585c11f82610259a3df019858
         return{
              name: ""
         }
