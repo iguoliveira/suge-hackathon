@@ -29,7 +29,7 @@ export default {
         </div>
         <div className="register-elements-area">
             <div className="inputs-area">
-                <inputData label="Name" inputType="text" inputName="Insert your Name" />
+                <inputData v-model="name" label="NAME" inputType="text" inputName="Insert your Name"  />
                 <inputData label="EDV" inputType="text" inputName="Insert your EDV" />
                 <inputData label="Password" inputType="password" inputName="Insert your Password" />
                 <inputData label="Confirm Password" inputType="password" inputName="Confirm your Password" />
