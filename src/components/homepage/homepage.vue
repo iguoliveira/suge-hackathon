@@ -6,27 +6,27 @@
       <card />
       <div className="team">
         <profileCard
-          personPath="bosch-imgs/bosch-red-logo.png"
+          personPath="group-imgs/gu.jpg"
           name="Baltazar Gustavo"
           role="Backend Developer"
         />
         <profileCard
-          personPath="bosch-imgs/bosch-red-logo.png"
+          personPath="group-imgs/vic.jpg"
           name="Eduardo Victor"
           role="Frontend Developer"
         />
         <profileCard
-          personPath="bosch-imgs/bosch-red-logo.png"
+          personPath="group-imgs/bianca.jpg"
           name="Hotops Bianca"
           role="UX/UI Designer"
         />
         <profileCard
-          personPath="bosch-imgs/bosch-red-logo.png"
+          personPath="group-imgs/ste.jpg"
           name="Moreira Stephany"
           role="Logger/Frontend Developer"
         />
         <profileCard
-          personPath="bosch-imgs/bosch-red-logo.png"
+          personPath="group-imgs/igor.jpg"
           name="Oliveira Igor"
           role="Frontend/Backend Developer"
         />
@@ -55,6 +55,9 @@ export default {
 <style scoped>
 .site {
   background-color: #eff1f2;
+  max-height: 100%;
+  height: 100vw;
+  overflow: hidden;
 }
 
 .content {
@@ -65,9 +68,9 @@ export default {
 }
 
 .team {
+  margin-top: 150px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px;
 }
 </style>

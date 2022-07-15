@@ -23,18 +23,20 @@ export default {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 26%;
+  width: 13%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .picture {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .content{
   text-align: center;
+  padding: 10px;
 }
 
 .name {
