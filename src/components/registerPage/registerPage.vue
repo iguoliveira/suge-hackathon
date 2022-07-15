@@ -7,7 +7,12 @@ import boschLogo from '../global-items/boschLogo.vue'
 import sugeLogo from '../global-items/sugeLogo.vue'
 
 export default {
-    el: "#app", 
+    el: "#app",
+        data() {
+        return{
+             name: ""
+        }
+    },
     name: "registerPage",
     components: {
         inputData,

@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <loginPage />
+  <registerPage />
 </template>
 
 <style>
