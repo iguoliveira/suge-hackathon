@@ -3,19 +3,27 @@ import loginPage from './components/loginPage/loginPage.vue'
 import homepage from './components/homepage/homepage.vue'
 import navbar from './components/global-items/navbar/navbar.vue'
 import registerPage from './components/registerPage/registerPage.vue'
+
+import mapPage from './components/mapPage/mapPage.vue'
+
 import gerenciamentoPage from './components/gerenciamentoPage/gerenciamento.vue'
 import listPage from './components/listPage/listagem.vue'
+
 
 export default {
   name: 'App',
   components: {
+
+    loginPage, homepage, navbar, registerPage, mapPage
+
     loginPage, homepage, navbar, registerPage, gerenciamentoPage, listPage,
+
   }
 }
 </script>
 
 <template>
-  <loginPage />
+  <mapPage />
 </template>
 
 <style>
