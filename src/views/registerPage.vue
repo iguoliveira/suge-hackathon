@@ -1,10 +1,10 @@
 <script>
-import inputData from '../components/global-items/inputData/input.vue'
-import buttonData from '../components/global-items/buttonData/button.vue'
-import textLink from '../components/global-items/buttonData/textLink.vue'
-import boschFade from '../components/global-items/boschFade.vue'
-import boschLogo from '../components/global-items/boschLogo.vue'
-import sugeLogo from '../components/global-items/sugeLogo.vue'
+import inputData from '../components/inputs/input.vue'
+import buttonData from '../components/inputs/buttonData/button.vue'
+import textLink from '../components/inputs/buttonData/textLink.vue'
+import boschFade from '../components/global-items/bosch-pattern/boschFade.vue'
+import boschLogo from '../components/global-items/bosch-pattern/boschLogo.vue'
+import sugeLogo from '../components/global-items/bosch-pattern/sugeLogo.vue'
 
 export default {
     el: "#app",

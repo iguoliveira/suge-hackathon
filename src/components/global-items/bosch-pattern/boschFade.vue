@@ -1,12 +1,12 @@
-<template>
-    <div className="line-bosch"></div>
-</template>
-
 <script>
 export default{
     name: 'boschLine',
 }
 </script>
+
+<template>
+    <div className="line-bosch"></div>
+</template>
 
 <style scoped>
 .line-bosch{

@@ -1,14 +1,14 @@
-<template>
-  <div>
-    <img src="bosch-imgs/search.svg" className="search" />
-  </div>
-</template>
-
 <script>
 export default {
   name: "searchIcon",
 };
 </script>
+
+<template>
+  <div>
+    <img src="bosch-imgs/search.svg" className="search" />
+  </div>
+</template>
 
 <style scoped>
 .search {

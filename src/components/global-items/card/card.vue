@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: "card",
+};
+</script>
+
 <template>
   <div className="card">
     <img src="/suge-imgs/logo.png" className="suge-logo" />
@@ -8,12 +14,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "card",
-};
-</script>
 
 <style scoped>
 .card {
@@ -30,6 +30,6 @@ export default {
 
 .about-us {
   font-size: clamp(0.9rem, 1vw, 1.2rem);
-  line-height: 40px;
+  line-height: 28px;
 }
 </style>

@@ -1,3 +1,22 @@
+<script>
+import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
+import navbar from "../components/global-items/navbar/navbar.vue";
+import searchBar from "../components/inputs/searchbar.vue"
+import searchIcon from "../components/global-items/bosch-pattern/searchIcon.vue"
+import mapImage from "../components/global-items/bosch-pattern/map.vue"
+
+export default {
+  name: "mapPage",
+  components: {
+    boschLine,
+    navbar,
+    searchBar,
+    searchIcon,
+    mapImage,
+  },
+};
+</script>
+
 <template>
   <div>
       <boschLine />
@@ -20,29 +39,10 @@
             <div className="interns-content">
             </div>
         </div>
-        <mapimage />
+        <mapImage />
     </div>
   </div>
 </template>
-
-<script>
-import boschLine from "../components/global-items/boschFade.vue";
-import navbar from "../components/global-items/navbar/navbar.vue";
-import searchdata from "../components/global-items/searchBar/searchbar.vue"
-import searchicon from "../components/global-items/searchIcon.vue"
-import mapimage from "../components/global-items/map.vue"
-
-export default {
-  name: "mapPage",
-  components: {
-    boschLine,
-    navbar,
-    searchdata,
-    searchicon,
-    mapimage
-  },
-};
-</script>
 
 <style scoped>
    /* background-color: #eff1f2  BOSCH CONTENT BACKGROUND COLOR LINK: https://brandguide.bosch.com/document/337#/farben */
@@ -83,5 +83,4 @@ export default {
        margin-left: 6.5vh;
        display: flex;
    }
-
 </style>

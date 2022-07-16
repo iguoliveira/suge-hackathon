@@ -1,3 +1,18 @@
+<script>
+import navbarLinks from "./navbarLinks/navbarLinks.vue";
+import boschLogo from "../bosch-pattern/boschLogo.vue";
+import sugeLogo from "../bosch-pattern/sugeLogo.vue";
+
+export default {
+  name: "navbar",
+  components: {
+    navbarLinks,
+    boschLogo,
+    sugeLogo,
+  },
+};
+</script>
+
 <template>
   <div className="navbar-container">
     <div className="navbar-logos">
@@ -23,21 +38,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import navbarLinks from "./navbarLinks/navbarLinks.vue";
-import boschLogo from "../boschLogo.vue";
-import sugeLogo from "../sugeLogo.vue";
-
-export default {
-  name: "navbar",
-  components: {
-    navbarLinks,
-    boschLogo,
-    sugeLogo,
-  },
-};
-</script>
 
 <style scoped>
 .navbar-container {

@@ -1,3 +1,24 @@
+<script>
+import inputData from "../components/inputs/input.vue"
+import buttonData from "../components/inputs/buttonData/button.vue";
+import textLink from "../components/inputs/buttonData/textLink.vue";
+import boschLogo from "../components/global-items/bosch-pattern/boschLogo.vue";
+import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
+import sugeLogo from "../components/global-items/bosch-pattern/sugeLogo.vue";
+
+export default {
+  name: "loginPage",
+  components: {
+    inputData,
+    buttonData,
+    textLink,
+    boschLogo,
+    boschLine,
+    sugeLogo,
+  },
+};
+</script>
+
 <template>
   <boschLine />
   <div className="all-space-available">
@@ -22,27 +43,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import inputData from "../components/global-items/inputData/input.vue"
-import buttonData from "../components/global-items/buttonData/button.vue";
-import textLink from "../components/global-items/buttonData/textLink.vue";
-import boschLogo from "../components/global-items/boschLogo.vue";
-import boschLine from "../components/global-items/boschFade.vue";
-import sugeLogo from "../components/global-items/sugeLogo.vue";
-
-export default {
-  name: "loginPage",
-  components: {
-    inputData,
-    buttonData,
-    textLink,
-    boschLogo,
-    boschLine,
-    sugeLogo,
-  },
-};
-</script>
 
 <style scoped>
 .all-space-available {

@@ -1,14 +1,3 @@
-<template>
-<div>
-    <label>{{label}}</label>
-    <input
-        :value="modelValue"
-        @input="$emit('update:modelValue', $event.target.value)"
-        :type="inputType" :placeholder="inputName"/>
-</div>
-    
-</template>
-
 <script>
 export default{
     name: 'inputData',
@@ -34,6 +23,17 @@ export default{
     
 }
 </script>
+
+<template>
+<div>
+    <label>{{label}}</label>
+    <input
+        :value="modelValue"
+        @input="$emit('update:modelValue', $event.target.value)"
+        :type="inputType" :placeholder="inputName"/>
+</div>
+    
+</template>
 
 <style scoped>
 div{

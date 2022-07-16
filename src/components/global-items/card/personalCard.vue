@@ -1,13 +1,3 @@
-<template>
-  <div className="card">
-    <img :src="personPath" className="picture" />
-    <div className="content">
-      <div className="name">{{ name }}</div>
-      <div>{{ role }}</div>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   name: "profileCard",
@@ -18,6 +8,16 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div className="card">
+    <img :src="personPath" className="picture" />
+    <div className="content">
+      <div className="name">{{ name }}</div>
+      <div>{{ role }}</div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .card {

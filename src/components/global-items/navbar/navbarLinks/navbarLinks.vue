@@ -1,9 +1,3 @@
-<template>
-    <div>
-        <div><a className="link-name">{{ linkName }}</a></div>
-    </div>
-</template>
-
 <script>
 export default{
     name: 'navbarLinks',
@@ -12,6 +6,12 @@ export default{
     }
 }
 </script>
+
+<template>
+    <div>
+        <div><a className="link-name">{{ linkName }}</a></div>
+    </div>
+</template>
 
 <style scoped>
 .link-name{
