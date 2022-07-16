@@ -33,10 +33,10 @@
 </template>
 
 <script>
-import boschLine from "../global-items/boschFade.vue";
-import navbar from "../navbar/navbar.vue";
-import inputData from './input/input.vue'
-import buttonData from './button/button.vue'
+import boschLine from "../components/global-items/boschFade.vue";
+import navbar from "../components/global-items/navbar/navbar.vue";
+import inputData from '../components/gerenciamentoPage/input/input.vue'
+import buttonData from '../components/gerenciamentoPage/button/button.vue'
 
 export default{
     name: 'gerenciamentoPage',

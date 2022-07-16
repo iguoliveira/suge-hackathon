@@ -36,10 +36,10 @@
 </template>
 
 <script>
-import boschLine from "../global-items/boschFade.vue";
-import navbar from "../global-items/navbar/navbar.vue";
-import card from "./card/card.vue";
-import profileCard from "./card/personalCard.vue";
+import boschLine from "../components/global-items/boschFade.vue";
+import navbar from "../components/global-items/navbar/navbar.vue";
+import card from "../components/global-items/card/card.vue";
+import profileCard from "../components/global-items/card/personalCard.vue";
 
 export default {
   name: "homepage",

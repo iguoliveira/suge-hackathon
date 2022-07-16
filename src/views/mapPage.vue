@@ -26,11 +26,11 @@
 </template>
 
 <script>
-import boschLine from "../global-items/boschFade.vue";
-import navbar from "../global-items/navbar/navbar.vue";
-import searchdata from "../global-items/searchBar/searchbar.vue"
-import searchicon from "../global-items/searchIcon.vue"
-import mapimage from "../global-items/map.vue"
+import boschLine from "../components/global-items/boschFade.vue";
+import navbar from "../components/global-items/navbar/navbar.vue";
+import searchdata from "../components/global-items/searchBar/searchbar.vue"
+import searchicon from "../components/global-items/searchIcon.vue"
+import mapimage from "../components/global-items/map.vue"
 
 export default {
   name: "mapPage",

@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import boschLine from "../global-items/boschFade.vue";
-import navbar from "../navbar/navbar.vue";
-import inputData from './search/search.vue'
+import boschLine from "../components/global-items/boschFade.vue";
+import navbar from "../components/global-items/navbar/navbar.vue";
+import inputData from '../components/global-items/search/search.vue'
 
 export default {
   name: "listagem",

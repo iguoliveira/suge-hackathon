@@ -5,10 +5,21 @@
       <sugeLogo />
     </div>
     <div className="navbar-links">
-      <navbarLinks className="navbar-home-link" linkName="Home" />
-      <navbarLinks linkName="Map" />
-      <navbarLinks linkName="Intern List" />
-      <navbarLinks linkName="Intern Manage" />
+      <router-link to="/homepage">
+        <navbarLinks className="navbar-home-link" linkName="Home" />
+      </router-link>
+
+      <router-link to="/map">
+        <navbarLinks linkName="Map" />
+      </router-link>
+      
+      <router-link to="/internList">
+        <navbarLinks linkName="Intern List" />
+      </router-link>
+
+      <router-link to="/managePage">
+        <navbarLinks linkName="Intern Manage" />
+      </router-link>
     </div>
   </div>
 </template>

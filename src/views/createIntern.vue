@@ -20,7 +20,7 @@
 
 <script>
 import { addDoc, collection, getFirestore } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js';
-import { firebaseConfig } from './../../firebase'
+import { firebaseConfig } from '../firebase'
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js'
 import { name, edv, course, gb, bu, periodOfInternship, coordinatorOfInternship } from './../global-items/inputData/input'
 console.log(firebaseConfig)

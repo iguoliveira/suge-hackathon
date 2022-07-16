@@ -1,10 +1,10 @@
 <script>
-import inputData from '../global-items/inputData/input.vue'
-import buttonData from '../global-items/buttonData/button.vue'
-import textLink from '../global-items/buttonData/textLink.vue'
-import boschFade from '../global-items/boschFade.vue'
-import boschLogo from '../global-items/boschLogo.vue'
-import sugeLogo from '../global-items/sugeLogo.vue'
+import inputData from '../components/global-items/inputData/input.vue'
+import buttonData from '../components/global-items/buttonData/button.vue'
+import textLink from '../components/global-items/buttonData/textLink.vue'
+import boschFade from '../components/global-items/boschFade.vue'
+import boschLogo from '../components/global-items/boschLogo.vue'
+import sugeLogo from '../components/global-items/sugeLogo.vue'
 
 export default {
     el: "#app",
@@ -47,7 +47,7 @@ export default {
             <div className="buttons-area">
                 <buttonData btnName="Register" />
             </div>
-            <textLink text="Already have a account?" />    
+            <router-link to="/"><textLink text="Already have a account?" /> </router-link>
         </div>
     </div>
 </template>
