@@ -8,7 +8,7 @@
         <img src="bosch-imgs/searchicon.png" >
         <inputData type="text" name="search" placeholder="Search.." />
     
-        <div  >
+        <div>
         <button class="btn"><i class="fa fa-trash"></i> Del</button>
         
         <button class="btn"><i class="fa fa-folder"></i> Edit</button>
@@ -23,6 +23,7 @@
 import boschLine from "../global-items/boschFade.vue";
 import navbar from "../global-items/navbar/navbar.vue";
 import inputData from './search/search.vue'
+import collaboratorsColRef from './../../firebase.js'
 
 export default {
   name: "listagem",
@@ -30,6 +31,9 @@ export default {
     boschLine,
     navbar,
     inputData,
+  },
+  methods: {
+
   },
 };
 </script>

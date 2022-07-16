@@ -12,12 +12,13 @@ export default {
   name: 'App',
   components: {
     loginPage, homepage, navbar, registerPage, gerenciamentoPage, listPage,
+    mapPage, 
   }
 }
 </script>
 
 <template>
-  <registerPage />
+  <listPage/>
 </template>
 
 <style>

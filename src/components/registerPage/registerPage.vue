@@ -31,7 +31,7 @@ export default {
     };
   },
   methods: {
-    adiciona() {
+    addCollaborator() {
       addDoc(collaboratorsColRef, {
         intern: this.name,
         course: this.course,
@@ -102,7 +102,7 @@ export default {
       <p>{{ gb }}</p>
       <p>{{ password }}</p>
       <div className="buttons-area">
-        <buttonData @click="adiciona" btnName="Register" />
+        <buttonData @click="addCollaborator" btnName="Register" />
       </div>
       <textLink text="Already have a account?" />
     </div>
