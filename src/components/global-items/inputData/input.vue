@@ -18,8 +18,7 @@ export default{
         inputType: String,
         modelValue: String,
     },
-    emits: ['update:modelValue']
-    
+    emits: ['update:modelValue'],
 }
 </script>
 

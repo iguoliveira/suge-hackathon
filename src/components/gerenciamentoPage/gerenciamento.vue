@@ -34,7 +34,7 @@
 
 <script>
 import boschLine from "../global-items/boschFade.vue";
-import navbar from "../navbar/navbar.vue";
+import navbar from "../global-items/navbar/navbar.vue";
 import inputData from './input/input.vue'
 import buttonData from './button/button.vue'
 

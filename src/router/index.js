@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
-import Edit from '@/views/Edit.vue'
+import listagem from './../components/listPage/listagem.vue'
 
 const routes = [{
     path: '/',
@@ -8,7 +8,14 @@ const routes = [{
     component: Home
 },
 {
-    path: '/edit/:id',
-    name: 'Edit',
-    component: Edit
+    path: '/listagem',
+    name: 'listagem',
+    component: listagem
 }]
+
+const router = createRouter({
+    history: createWebHistory(process.env.BASE_URL),
+    routes,
+})
+
+export default router

@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import { addDoc, collection, getFirestore } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js';
-import { firebaseConfig } from './../../firebase'
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js'
-console.log(firebaseConfig)
-const firebaseApp = initializeApp(firebaseConfig)
-const db = getFirestore(firebaseApp)
+// import { addDoc, collection, getFirestore } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js';
+// import { firebaseConfig } from './../../firebase'
+// import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js'
+// console.log(firebaseConfig)
+// const firebaseApp = initializeApp(firebaseConfig)
+// const db = getFirestore(firebaseApp)
 
 const colRef = collection(db, 'collaborators');
 
