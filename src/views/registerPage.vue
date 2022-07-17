@@ -5,7 +5,7 @@ import textLink from "../components/inputs/buttonData/textLink.vue";
 import boschFade from "../components/global-items/bosch-pattern/boschFade.vue";
 import boschLogo from "../components/global-items/bosch-pattern/boschLogo.vue";
 import sugeLogo from "../components/global-items/bosch-pattern/sugeLogo.vue";
-import collaboratorsColRef from "../firebase.js";
+import { coordinatorsColRef } from "../firebase.js";
 import { addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 export default {
@@ -32,9 +32,9 @@ export default {
   },
   methods: {
     addCollaborator() {
-      addDoc(collaboratorsColRef, {
-        intern: this.name,
-        course: this.course,
+      addDoc(coordinatorsColRef, {
+        name: this.name,
+        area: this.course,
         edv: this.edv,
         gb: this.gb,
         bu: this.bu,

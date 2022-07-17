@@ -18,5 +18,6 @@ const db = getFirestore(firebaseApp)
 
 //collection reference
 const collaboratorsColRef = collection(db, 'collaborators')
+const coordinatorsColRef = collection(db, 'coordinators')
 
-export default collaboratorsColRef 
+export {collaboratorsColRef, coordinatorsColRef}
