@@ -99,7 +99,7 @@ export default {
       <div className="buttons-area">
         <buttonData @click="addCollaborator" btnName="Register" />
       </div>
-      <textLink text="Already have a account?" />
+      <router-link to="/"><textLink text="Already have a account?" /></router-link>
     </div>
   </div>
 </template>

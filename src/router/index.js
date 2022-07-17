@@ -23,17 +23,17 @@ const routes = [
         component: homepage,
     },
     {
-        path: '/map',
+        path: '/homepage/map',
         name: 'map',
         component: mapPage,
     },
     {
-        path: '/internList',
+        path: '/homepage/internList',
         name: 'internList',
         component: listagem,
     },
     {
-        path: '/managePage',
+        path: '/homepage/managePage',
         name: 'manageIntern',
         component: gerenciamentoPage,
     },

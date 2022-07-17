@@ -1,4 +1,3 @@
-
 export const firebaseConfig = {
     apiKey: "AIzaSyAPHiyvLfGbxAyPntg2grpzEf3K8i76afo",
     authDomain: "hackathon-firestore.firebaseapp.com",
