@@ -5,9 +5,16 @@ import textLink from "../components/inputs/buttonData/textLink.vue";
 import boschLogo from "../components/global-items/bosch-pattern/boschLogo.vue";
 import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
 import sugeLogo from "../components/global-items/bosch-pattern/sugeLogo.vue";
+import router from "../router";
 
 export default {
   name: "loginPage",
+  data() {
+    return {
+      edv: "",
+      password: ""
+    }
+  },
   components: {
     inputData,
     buttonData,
@@ -16,6 +23,16 @@ export default {
     boschLine,
     sugeLogo,
   },
+  methods: {
+    verifyData() {
+      console.log(this.edv + " " + this.password)
+      if(this.edv == "92898426"){
+        if(this.password == "senha123"){
+         router.push('/homepage')
+        }
+      }
+    }
+  }
 };
 </script>
 
@@ -29,12 +46,12 @@ export default {
     <div className="login-elements-area">
 
       <div className="inputs-area">
-        <inputData label="EDV" inputType="text" inputName="Insert your EDV" />
-        <inputData label="Password" inputType="password" inputName="Insert your Password" />
+        <inputData v-model="edv" label="EDV" inputType="text" inputName="Insert your EDV" />
+        <inputData v-model="password" label="Password" inputType="password" inputName="Insert your Password" />
       </div>
 
       <div className="buttons-area">
-        <router-link to="/homepage"><buttonData btnName="Login" /></router-link>
+        <buttonData @click="verifyData()" btnName="Login" />
         <router-link to="/register"><buttonData btnName="Sign Up" /></router-link>
       </div>
 
