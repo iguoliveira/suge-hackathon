@@ -23,7 +23,7 @@ export default {
         <img src="bosch-imgs/searchicon.png" >
         <inputData type="text" name="search" placeholder="Search.." />
     
-        <div  >
+        <div>
         <button class="btn"><i class="fa fa-trash"></i> Del</button>
         
         <button class="btn"><i class="fa fa-folder"></i> Edit</button>
