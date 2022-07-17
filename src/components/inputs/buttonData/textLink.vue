@@ -1,7 +1,3 @@
-<template>
-    <div>{{ text }} <a>Click here</a></div>
-</template>
-
 <script>
 export default{
     name: 'textLink',
@@ -10,6 +6,10 @@ export default{
     }
 }
 </script>
+
+<template>
+    <div>{{ text }} <a>Click here</a></div>
+</template>
 
 <style scoped>
 div{

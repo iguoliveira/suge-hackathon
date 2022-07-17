@@ -1,13 +1,3 @@
-<template>
-<div>
-    <input
-        :value="modelValue"
-        @input="$emit('update:modelValue', $event.target.value)"
-        :type="inputType" :placeholder="inputName"/>
-</div>
-    
-</template>
-
 <script>
 export default{
     name: 'searchBar',
@@ -22,8 +12,16 @@ export default{
 }
 </script>
 
-<style scoped>
+<template>
+<div>
+    <input
+        :value="modelValue"
+        @input="$emit('update:modelValue', $event.target.value)"
+        :type="inputType" :placeholder="inputName"/>
+</div>
+</template>
 
+<style scoped>
 input{
     background-color: white;
     font-size: 15px;
@@ -34,5 +32,4 @@ input{
     height: 2vw;
     text-align: center;
 }
-
 </style>

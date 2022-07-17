@@ -1,3 +1,24 @@
+<script>
+import inputData from "../components/inputs/input.vue"
+import buttonData from "../components/inputs/buttonData/button.vue";
+import textLink from "../components/inputs/buttonData/textLink.vue";
+import boschLogo from "../components/global-items/bosch-pattern/boschLogo.vue";
+import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
+import sugeLogo from "../components/global-items/bosch-pattern/sugeLogo.vue";
+
+export default {
+  name: "loginPage",
+  components: {
+    inputData,
+    buttonData,
+    textLink,
+    boschLogo,
+    boschLine,
+    sugeLogo,
+  },
+};
+</script>
+
 <template>
   <boschLine />
   <div className="all-space-available">
@@ -13,8 +34,8 @@
       </div>
 
       <div className="buttons-area">
-        <buttonData btnName="Login" />
-        <buttonData btnName="Sign Up" />
+        <router-link to="/homepage"><buttonData btnName="Login" /></router-link>
+        <router-link to="/register"><buttonData btnName="Sign Up" /></router-link>
       </div>
 
       <textLink text="Forgot password?" />
@@ -22,27 +43,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import inputData from "../global-items/inputData/input.vue"
-import buttonData from "../global-items/buttonData/button.vue";
-import textLink from "../global-items/buttonData/textLink.vue";
-import boschLogo from "../global-items/boschLogo.vue";
-import boschLine from "../global-items/boschFade.vue";
-import sugeLogo from "../global-items/sugeLogo.vue";
-
-export default {
-  name: "loginPage",
-  components: {
-    inputData,
-    buttonData,
-    textLink,
-    boschLogo,
-    boschLine,
-    sugeLogo,
-  },
-};
-</script>
 
 <style scoped>
 .all-space-available {

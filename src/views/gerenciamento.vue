@@ -1,13 +1,27 @@
+<script>
+import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
+import navbar from "../components/global-items/navbar/navbar.vue";
+import inputData from '../components/inputs/input.vue'
+import buttonData from '../components/inputs/buttonData/button.vue'
+
+export default{
+    name: 'managePage',
+    components: {
+        inputData,
+        buttonData,
+        boschLine,
+        navbar,
+    }
+}
+</script>
+
 <template>
     <div>
       <boschLine />
       <navbar />
     </div>
-
         <section className="home">
-            <div className="fundo">
-                
-            </div>
+            <div className="fundo"></div>
         <div className="conteudo">
             <h2>Adicionar Estagiários</h2>
             <div className="form">
@@ -24,27 +38,9 @@
                 </form>
                 
             </div>
-    </div>
-
-    
-   
-      
+        </div>
     </section>
 </template>
-
-<script>
-import boschLine from "../global-items/boschFade.vue";
-import navbar from "../navbar/navbar.vue";
-import inputData from './input/input.vue'
-import buttonData from './button/button.vue'
-
-export default{
-    name: 'gerenciamentoPage',
-    components: {
-        inputData, buttonData, boschLine,navbar,
-    }
-}
-</script>
 
 <style scoped>
 

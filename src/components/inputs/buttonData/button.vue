@@ -1,9 +1,3 @@
-<template>
-<div>
-    <button>{{btnName}}</button>
-</div>
-</template>
-
 <script>
 export default{
     name: 'buttonData',
@@ -12,6 +6,12 @@ export default{
     },
 }
 </script>
+
+<template>
+<div>
+    <button>{{btnName}}</button>
+</div>
+</template>
 
 <style scoped>
 button{

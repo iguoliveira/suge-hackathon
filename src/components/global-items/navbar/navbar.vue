@@ -1,22 +1,7 @@
-<template>
-  <div className="navbar-container">
-    <div className="navbar-logos">
-      <boschLogo />
-      <sugeLogo />
-    </div>
-    <div className="navbar-links">
-      <navbarLinks className="navbar-home-link" linkName="Home" />
-      <navbarLinks linkName="Map" />
-      <navbarLinks linkName="Intern List" />
-      <navbarLinks linkName="Intern Manage" />
-    </div>
-  </div>
-</template>
-
 <script>
 import navbarLinks from "./navbarLinks/navbarLinks.vue";
-import boschLogo from "../boschLogo.vue";
-import sugeLogo from "../sugeLogo.vue";
+import boschLogo from "../bosch-pattern/boschLogo.vue";
+import sugeLogo from "../bosch-pattern/sugeLogo.vue";
 
 export default {
   name: "navbar",
@@ -27,6 +12,32 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div className="navbar-container">
+    <div className="navbar-logos">
+      <boschLogo />
+      <sugeLogo />
+    </div>
+    <div className="navbar-links">
+      <router-link to="/homepage">
+        <navbarLinks className="navbar-home-link" linkName="Home" />
+      </router-link>
+
+      <router-link to="/map">
+        <navbarLinks linkName="Map" />
+      </router-link>
+      
+      <router-link to="/internList">
+        <navbarLinks linkName="Intern List" />
+      </router-link>
+
+      <router-link to="/managePage">
+        <navbarLinks linkName="Intern Manage" />
+      </router-link>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .navbar-container {

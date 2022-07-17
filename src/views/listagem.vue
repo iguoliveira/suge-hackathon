@@ -1,3 +1,18 @@
+<script>
+import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
+import navbar from "../components/global-items/navbar/navbar.vue";
+import searchBar from '../components/inputs/searchbar.vue'
+
+export default {
+  name: "listagem",
+  components: {
+    boschLine,
+    navbar,
+    searchBar,
+  },
+};
+</script>
+
 <template>
   <div>
       <boschLine />
@@ -18,21 +33,6 @@
       
   </div>
 </template>
-
-<script>
-import boschLine from "../global-items/boschFade.vue";
-import navbar from "../navbar/navbar.vue";
-import inputData from './search/search.vue'
-
-export default {
-  name: "listagem",
-  components: {
-    boschLine,
-    navbar,
-    inputData,
-  },
-};
-</script>
 
 <style scoped>
    /* background-color: #eff1f2  BOSCH CONTENT BACKGROUND COLOR LINK: https://brandguide.bosch.com/document/337#/farben */
@@ -77,5 +77,4 @@ input {
 }
 
 }
-
 </style>
