@@ -54,10 +54,8 @@ export default {
 
 <style scoped>
 .site {
-  background-color: #eff1f2;
   max-height: 100%;
-  height: 100vw;
-  overflow: hidden;
+  height: 100%;
 }
 
 .content {

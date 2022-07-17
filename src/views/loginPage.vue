@@ -76,7 +76,6 @@ export default {
 
 .login-elements-area {
     align-self: center;
-    background-color: #f8f8f8;
     box-shadow: black;
     padding: 50px 40px;
     border-radius: 8px;
