@@ -25,14 +25,13 @@ export default {
   },
   methods: {
     verifyData() {
-      console.log(this.edv + " " + this.password)
       if(this.edv == "92898426"){
         if(this.password == "senha123"){
          router.push('/homepage')
         }
       }
     }
-  }
+  },
 };
 </script>
 
@@ -55,8 +54,6 @@ export default {
         <router-link to="/register"><buttonData btnName="Sign Up" /></router-link>
       </div>
 
-      <textLink text="Forgot password?" />
-      
     </div>
   </div>
 </template>

@@ -7,6 +7,7 @@ import boschLogo from "../components/global-items/bosch-pattern/boschLogo.vue";
 import sugeLogo from "../components/global-items/bosch-pattern/sugeLogo.vue";
 import { coordinatorsColRef } from "../firebase.js";
 import { addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+import router from "../router";
 
 export default {
   el: "#app",
@@ -36,10 +37,33 @@ export default {
         name: this.name,
         area: this.course,
         edv: this.edv,
-        gb: this.gb,
-        bu: this.bu,
+        password: this.password,
       });
     },
+    verifyData() {
+      if(this.name != ""){
+        if(this.edv != ""){
+          if(this.password != ""){
+            if(this.confirmPassword == this.password){
+              if(this.course != ""){
+                this.addCollaborator()
+                router.push('/homepage')
+              }else{
+                alert("Fill the area field!")
+              }
+            }else{
+              alert("Passwords doesn't match!")
+            }
+          }else{
+            alert("Fill the password field!")
+          }
+        }else{
+          alert("Fill the edv field!")
+        }
+      }else{
+        alert("Fill the name field!")
+      }
+    }
   },
 };
 </script>
@@ -55,7 +79,7 @@ export default {
       <div className="inputs-area">
         <inputData
           v-model="name"
-          label="NAME"
+          label="Name"
           inputType="text"
           inputName="Insert your Name"
         />
@@ -79,11 +103,11 @@ export default {
         />
         <inputData
           v-model="course"
-          label="Course"
+          label="Area"
           inputType="text"
-          inputName="Insert the Course"
+          inputName="Insert your Area"
         />
-        <inputData
+        <!-- <inputData
           v-model="gb"
           label="GB"
           inputType="text"
@@ -94,10 +118,10 @@ export default {
           label="BU"
           inputType="text"
           inputName="Insert BU"
-        />
+        /> -->
       </div>
       <div className="buttons-area">
-        <buttonData @click="addCollaborator" btnName="Register" />
+        <buttonData @click="verifyData()" btnName="Register" />
       </div>
       <router-link to="/"><textLink text="Already have a account?" /></router-link>
     </div>
