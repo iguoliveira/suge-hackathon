@@ -27,10 +27,6 @@ export default {
       <router-link to="/internList">
         <navbarLinks linkName="Intern List" />
       </router-link>
-      
-      <router-link to="/managePage">
-        <navbarLinks linkName="Intern Manage" />
-      </router-link>
     </div>
   </div>
 </template>
