@@ -27,7 +27,7 @@ const routes = [
         component: internList,
     },
     {
-        path: '/managePage',
+        path: '/create',
         name: 'manageIntern',
         component: gerenciamentoPage,
     },

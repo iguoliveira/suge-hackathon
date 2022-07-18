@@ -22,16 +22,16 @@ onMounted(async () => {
       edv: doc.data().edv,
     };
     fbCollas.push(colla);
-    console.log(fbCollas)
+    console.log(fbCollas);
   });
   sus.value = fbCollas;
 });
 </script>
 
 <template>
+  <boschLine />
+  <navbar />
   <div className="area-available">
-    <boschLine />
-    <navbar />
     <div className="content">
       <div className="intern-area">
         <div className="header">
@@ -53,6 +53,9 @@ onMounted(async () => {
 <style scoped>
 .area-available {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 .content {
   display: flex;
