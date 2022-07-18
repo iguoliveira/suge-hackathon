@@ -1,44 +1,31 @@
-<script>
-import navbar from "../components/global-items/navbar/navbar.vue";
+<script setup>
+import navbar from "../components/global-items/navbar/navbar.vue"
 import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
 import mapPage from "../components/global-items/bosch-pattern/map.vue";
-import { colRef } from "../firebase.js";
 import {
-  onSnapshot,
   getDocs,
   collection,
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import { ref, onMounted } from "vue";
 import { db } from "../firebase.js";
 
-const sus = ref([]);
+const sus = ref([])
 
-export default {
-  name: "internList",
-  setup() {
-    onMounted(async () => {
-      const querySnapshot = await getDocs(collection(db, "collaborators"));
-      let fbCollas = [];
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, "=>", doc.data());
-        const colla = {
-          id: doc.id,
-          intern: doc.data().intern,
-          course: doc.data().course,
-          edv: doc.data().edv,
-        };
-        fbCollas.push(colla);
-        console.log(fbCollas);
-      });
-      sus.value = fbCollas;
-    });
-  },
-  components: {
-    navbar,
-    boschLine,
-    mapPage,
-  },
-};
+onMounted(async () => {
+  const querySnapshot = await getDocs(collection(db, "collaborators"))
+  let fbCollas = []
+  querySnapshot.forEach((doc) => {
+    const colla = {
+      id: doc.id,
+      intern: doc.data().intern,
+      course: doc.data().course,
+      edv: doc.data().edv,
+    }
+    fbCollas.push(colla);
+  })
+  sus.value = fbCollas;
+})
+
 </script>
 
 <template>
@@ -52,10 +39,10 @@ export default {
           <div>EDV</div>
           <div>AREA</div>
         </div>
-        <div className="row">
-          <div>IGOR OLIVEIRA</div>
-          <div>3231312</div>
-          <div>ETS</div>
+        <div v-for="i in sus" :key="i" className="row">
+          <div>{{ i.intern }}</div>
+          <div>{{ i.edv}}</div>
+          <div>{{ i.course}}</div>
         </div>
       </div>
       <mapPage />
