@@ -119,11 +119,7 @@ export default {
   </div>
 </template>
 
-<style>
-body {
-  overflow: hidden;
-}
-
+<style scoped>
 .all-space-available {
   width: 100%;
   display: flex;

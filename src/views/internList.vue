@@ -6,11 +6,17 @@ import deleteButton from "../components/inputs/deleteButton/delete.vue";
 import {
   getDocs,
   collection,
+  doc,
+  deleteDoc,
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import { ref, onMounted } from "vue";
-import { db } from "../firebase.js";
+import { db, colRef } from "../firebase.js";
 
 const sus = ref([]);
+
+const deleteIntern = id => {
+  deleteDoc(doc(colRef, id))
+}
 
 onMounted(async () => {
   const querySnapshot = await getDocs(collection(db, "collaborators"));
@@ -23,30 +29,25 @@ onMounted(async () => {
       edv: doc.data().edv,
     };
     fbCollas.push(colla);
-    console.log(fbCollas);
   });
   sus.value = fbCollas;
 });
 </script>
 
 <template>
-  <boschLine />
-  <navbar />
   <div className="area-available">
+    <boschLine />
+    <navbar />
     <div className="content">
       <mapPage />
       <div className="intern-area">
-        <div className="header">
-          <div>NAME</div>
-          <div>EDV</div>
-          <div>AREA</div>
-          <div>ACTION</div>
-        </div>
-        <div v-for="i in sus" :key="i" className="row">
-          <div>{{ i.name }}</div>
-          <div>{{ i.edv }}</div>
-          <div>{{ i.area }}</div>
-          <deleteButton btnName="Del" />
+        <div className="englobe-all">
+          <div v-for="i in sus" :key="i" className="row">
+            <div className="grid-item">Name: {{ i.name }}</div>
+            <div className="grid-item">Edv: {{ i.edv }}</div>
+            <div className="grid-item">Area: {{ i.area }}</div>
+            <deleteButton @click="deleteIntern(i.id)" btnName="Del" />
+          </div>
         </div>
       </div>
     </div>
@@ -56,9 +57,6 @@ onMounted(async () => {
 <style scoped>
 .area-available {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
 }
 .content {
   display: flex;
@@ -73,18 +71,19 @@ onMounted(async () => {
   overflow-y: scroll;
 }
 
-.header {
-  display: flex;
-  justify-content: space-around;
-  font-weight: bold;
-  font-size: 1.1em;
-  border-bottom: 1px solid black;
+.englobe-all {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
-
 .row {
-  display: flex;
-  justify-content: space-around;
   font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   padding: 5px;
+}
+
+.grid-item {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
 }
 </style>
