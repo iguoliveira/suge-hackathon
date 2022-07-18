@@ -107,18 +107,6 @@ export default {
           inputType="text"
           inputName="Insert your Area"
         />
-        <!-- <inputData
-          v-model="gb"
-          label="GB"
-          inputType="text"
-          inputName="Insert GB"
-        />
-        <inputData
-          v-model="bu"
-          label="BU"
-          inputType="text"
-          inputName="Insert BU"
-        /> -->
       </div>
       <div className="buttons-area">
         <buttonData @click="verifyData()" btnName="Register" />
@@ -128,13 +116,18 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style>
+body{
+  overflow: hidden;
+}
+
 .all-space-available {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .logos {

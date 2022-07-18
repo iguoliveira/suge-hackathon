@@ -2,8 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import loginPage from '../views/loginPage.vue'
 import registerPage from '../views/registerPage.vue'
 import homepage from '../views/homepage.vue'
-import mapPage from '../views/mapPage.vue'
-import listagem from '../views/listagem.vue'
+import internList from '../views/internList.vue'
 import gerenciamentoPage from '../views/gerenciamento.vue'
 
 const routes = [
@@ -23,17 +22,12 @@ const routes = [
         component: homepage,
     },
     {
-        path: '/homepage/map',
-        name: 'map',
-        component: mapPage,
+        path: '/internList',
+        name: 'list',
+        component: internList,
     },
     {
-        path: '/homepage/internList',
-        name: 'internList',
-        component: listagem,
-    },
-    {
-        path: '/homepage/managePage',
+        path: '/managePage',
         name: 'manageIntern',
         component: gerenciamentoPage,
     },

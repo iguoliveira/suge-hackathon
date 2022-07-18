@@ -23,7 +23,7 @@ export default {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 13%;
+  width: 18%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,17 +31,16 @@ export default {
 
 .picture {
   max-width: 100%;
-  max-height: 100%;
+  height: 100%;
 }
 
 .content{
   text-align: center;
-  padding: 10px;
+  padding: 15px;
 }
 
 .name {
   font-weight: bold;
-  font-size: 1.15em;
   text-decoration: underline;
 }
 </style>

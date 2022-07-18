@@ -54,21 +54,22 @@ export default {
 
 <style scoped>
 .site {
-  max-height: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .content {
-  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .team {
-  margin-top: 150px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 70vh;
 }
 </style>

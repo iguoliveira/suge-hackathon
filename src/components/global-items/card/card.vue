@@ -21,11 +21,11 @@ export default {
   align-items: center;
   width: 50%;
   min-width: 40%;
-  gap: 50px;
+  gap: 20px;
 }
 
 .suge-logo {
-  height: 80px;
+  height: 60px;
 }
 
 .about-us {
