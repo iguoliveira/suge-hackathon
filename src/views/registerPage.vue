@@ -10,7 +10,7 @@ import { addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firest
 import router from "../router";
 
 export default {
- el: "#app",
+  el: "#app",
   name: "registerPage",
   components: {
     inputData,
@@ -42,31 +42,30 @@ export default {
       });
     },
     verifyData() {
-      if(this.name != ""){
-        if(this.edv != ""){
-          if(this.password != ""){
-            if(this.confirmPassword == this.password){
-              if(this.course != ""){
-                this.addCollaborator()
-                router.push('/homepage')
-              }else{
-                alert("Fill the area field!")
+      if (this.name != "") {
+        if (this.edv != "") {
+          if (this.password != "") {
+            if (this.confirmPassword == this.password) {
+              if (this.course != "") {
+                this.addCollaborator();
+                router.push("/homepage");
+              } else {
+                alert("Fill the area field!");
               }
-            }else{
-              alert("Passwords doesn't match!")
+            } else {
+              alert("Passwords doesn't match!");
             }
-          }else{
-            alert("Fill the password field!")
+          } else {
+            alert("Fill the password field!");
           }
-        }else{
-          alert("Fill the edv field!")
+        } else {
+          alert("Fill the edv field!");
         }
-      }else{
-        alert("Fill the name field!")
+      } else {
+        alert("Fill the name field!");
       }
-    }
+    },
   },
-  
 };
 </script>
 
@@ -113,13 +112,15 @@ export default {
       <div className="buttons-area">
         <buttonData @click="verifyData()" btnName="Register" />
       </div>
-      <router-link to="/"><textLink text="Already have a account?" /></router-link>
+      <router-link to="/"
+        ><textLink text="Already have a account?"
+      /></router-link>
     </div>
   </div>
 </template>
 
 <style>
-body{
+body {
   overflow: hidden;
 }
 
