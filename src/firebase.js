@@ -25,4 +25,4 @@ const coordinatorsColRef = collection(db, 'coordinator')
 const docRef = doc(db, 'collaborators', 'THWye7F8AFqr4BTPqR3G')
 
 export default collaboratorsColRef 
-export {docRef, db, colRef}
+export { docRef, db, colRef, coordinatorsColRef }
