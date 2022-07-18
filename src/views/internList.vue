@@ -1,5 +1,5 @@
 <script setup>
-import navbar from "../components/global-items/navbar/navbar.vue"
+import navbar from "../components/global-items/navbar/navbar.vue";
 import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
 import mapPage from "../components/global-items/bosch-pattern/map.vue";
 import {
@@ -9,23 +9,23 @@ import {
 import { ref, onMounted } from "vue";
 import { db } from "../firebase.js";
 
-const sus = ref([])
+const sus = ref([]);
 
 onMounted(async () => {
-  const querySnapshot = await getDocs(collection(db, "collaborators"))
-  let fbCollas = []
+  const querySnapshot = await getDocs(collection(db, "collaborators"));
+  let fbCollas = [];
   querySnapshot.forEach((doc) => {
     const colla = {
       id: doc.id,
-      intern: doc.data().intern,
-      course: doc.data().course,
+      name: doc.data().name,
+      area: doc.data().area,
       edv: doc.data().edv,
-    }
+    };
     fbCollas.push(colla);
-  })
+    console.log(fbCollas)
+  });
   sus.value = fbCollas;
-})
-
+});
 </script>
 
 <template>
@@ -40,9 +40,9 @@ onMounted(async () => {
           <div>AREA</div>
         </div>
         <div v-for="i in sus" :key="i" className="row">
-          <div>{{ i.intern }}</div>
-          <div>{{ i.edv}}</div>
-          <div>{{ i.course}}</div>
+          <div>{{ i.name }}</div>
+          <div>{{ i.edv }}</div>
+          <div>{{ i.area }}</div>
         </div>
       </div>
       <mapPage />

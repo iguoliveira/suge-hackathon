@@ -3,14 +3,36 @@ import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
 import navbar from "../components/global-items/navbar/navbar.vue";
 import inputData from "../components/inputs/input.vue";
 import buttonData from "../components/inputs/buttonData/button.vue";
+import { addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+import { colRef } from "../firebase.js";
 
 export default {
+  el: "#app",
   name: "managePage",
   components: {
     inputData,
     buttonData,
     boschLine,
     navbar,
+  },
+  methods: {
+    AddIntern() {
+      addDoc(colRef, {
+        name: this.name,
+        area: this.area,
+        edv: this.edv,
+      });
+      this.name = "";
+      this.edv = "";
+      this.area = "";
+    },
+  },
+  data() {
+    return {
+      name: "",
+      edv: "",
+      area: "",
+    };
   },
 };
 </script>
@@ -23,12 +45,25 @@ export default {
   <section className="home">
     <div className="conteudo">
       <div className="form">
-        <form className="addCollaboratorApprenticeForm">
-          <inputData label="Intern" inputType="text" inputName="Intern Name" />
-          <inputData label="EDV" inputType="text" inputName="Intern EDV" />
-          <inputData label="Area" inputType="text" inputName="Intern Area" />
-          <buttonData btnName="Add" />
-        </form>
+        <inputData
+          v-model="name"
+          label="Intern"
+          inputType="text"
+          inputName="Intern Name"
+        />
+        <inputData
+          v-model="edv"
+          label="EDV"
+          inputType="text"
+          inputName="Intern EDV"
+        />
+        <inputData
+          v-model="area"
+          label="Area"
+          inputType="text"
+          inputName="Intern Area"
+        />
+        <buttonData @click="AddIntern()" btnName="Add" />
       </div>
     </div>
   </section>
@@ -54,10 +89,10 @@ export default {
   border: 4px solid rgb(0, 80, 133);
 }
 
-.addCollaboratorApprenticeForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 1040px) {
