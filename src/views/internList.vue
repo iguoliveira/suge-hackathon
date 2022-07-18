@@ -2,9 +2,37 @@
 import navbar from "../components/global-items/navbar/navbar.vue";
 import boschLine from "../components/global-items/bosch-pattern/boschFade.vue";
 import mapPage from "../components/global-items/bosch-pattern/map.vue";
+import { colRef } from "../firebase.js";
+import {
+  onSnapshot,
+  getDocs,
+  collection,
+} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+import { ref, onMounted } from "vue";
+import { db } from "../firebase.js";
+
+const sus = ref([]);
 
 export default {
   name: "internList",
+  setup() {
+    onMounted(async () => {
+      const querySnapshot = await getDocs(collection(db, "collaborators"));
+      let fbCollas = [];
+      querySnapshot.forEach((doc) => {
+        console.log(doc.id, "=>", doc.data());
+        const colla = {
+          id: doc.id,
+          intern: doc.data().intern,
+          course: doc.data().course,
+          edv: doc.data().edv,
+        };
+        fbCollas.push(colla);
+        console.log(fbCollas);
+      });
+      sus.value = fbCollas;
+    });
+  },
   components: {
     navbar,
     boschLine,
