@@ -23,7 +23,6 @@ onMounted(async () => {
       edv: doc.data().edv,
     };
     fbCollas.push(colla);
-    console.log(fbCollas);
   });
   sus.value = fbCollas;
 });
@@ -76,6 +75,7 @@ onMounted(async () => {
 }
 
 .grid-item {
+  background-color: white;
   border: 1px solid black;
   padding: 10px;
   text-align: center;
