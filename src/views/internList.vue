@@ -6,11 +6,17 @@ import deleteButton from "../components/inputs/deleteButton/delete.vue";
 import {
   getDocs,
   collection,
+  doc,
+  deleteDoc,
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import { ref, onMounted } from "vue";
-import { db } from "../firebase.js";
+import { db, colRef } from "../firebase.js";
 
 const sus = ref([]);
+
+const deleteIntern = id => {
+  deleteDoc(doc(colRef, id))
+}
 
 onMounted(async () => {
   const querySnapshot = await getDocs(collection(db, "collaborators"));
@@ -40,7 +46,7 @@ onMounted(async () => {
             <div className="grid-item">Name: {{ i.name }}</div>
             <div className="grid-item">Edv: {{ i.edv }}</div>
             <div className="grid-item">Area: {{ i.area }}</div>
-            <deleteButton btnName="Del" />
+            <deleteButton @click="deleteIntern(i.id)" btnName="Del" />
           </div>
         </div>
       </div>
