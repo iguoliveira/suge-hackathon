@@ -24,14 +24,10 @@ export default {
         <navbarLinks className="navbar-home-link" linkName="Home" />
       </router-link>
 
-      <router-link to="/map">
-        <navbarLinks linkName="Map" />
-      </router-link>
-      
       <router-link to="/internList">
         <navbarLinks linkName="Intern List" />
       </router-link>
-
+      
       <router-link to="/managePage">
         <navbarLinks linkName="Intern Manage" />
       </router-link>

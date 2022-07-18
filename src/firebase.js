@@ -1,3 +1,5 @@
+import { getFirestore, collection } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js'
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js'
 
 export const firebaseConfig = {
     apiKey: "AIzaSyAPHiyvLfGbxAyPntg2grpzEf3K8i76afo",
@@ -9,15 +11,12 @@ export const firebaseConfig = {
     measurementId: "G-86K2T88EX7"
 };
 
-import { getFirestore, collection, onSnapshot, doc,
-    addDoc, deleteDoc, } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js'
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js'
-
 //initialization of firebase
 const firebaseApp = initializeApp(firebaseConfig)
 const db = getFirestore(firebaseApp)
 
 //collection reference
 const collaboratorsColRef = collection(db, 'collaborators')
+const coordinatorsColRef = collection(db, 'coordinator')
 
-export default collaboratorsColRef 
+export {collaboratorsColRef, coordinatorsColRef}
