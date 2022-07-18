@@ -6,7 +6,6 @@ import boschFade from "../components/global-items/bosch-pattern/boschFade.vue";
 import boschLogo from "../components/global-items/bosch-pattern/boschLogo.vue";
 import sugeLogo from "../components/global-items/bosch-pattern/sugeLogo.vue";
 import { coordinatorsColRef } from "../firebase.js";
-import  collaboratorsColRef  from "../firebase.js";
 import { addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import router from "../router";
 
@@ -109,7 +108,6 @@ export default {
           label="Area"
           inputType="text"
           inputName="Insert your Area"
-          inputName="Insert the Course"
         />
       </div>
       <div className="buttons-area">
