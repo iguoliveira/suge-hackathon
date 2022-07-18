@@ -5,11 +5,11 @@ import textLink from "../components/inputs/buttonData/textLink.vue";
 import boschFade from "../components/global-items/bosch-pattern/boschFade.vue";
 import boschLogo from "../components/global-items/bosch-pattern/boschLogo.vue";
 import sugeLogo from "../components/global-items/bosch-pattern/sugeLogo.vue";
-import collaboratorsColRef from "../firebase.js";
+import  collaboratorsColRef  from "../firebase.js";
 import { addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 export default {
-  el: "#app",
+ el: "#app",
   name: "registerPage",
   components: {
     inputData,
@@ -30,6 +30,7 @@ export default {
       bu: "",
     };
   },
+
   methods: {
     addCollaborator() {
       addDoc(collaboratorsColRef, {
@@ -40,7 +41,9 @@ export default {
         bu: this.bu,
       });
     },
+  
   },
+  
 };
 </script>
 
@@ -82,18 +85,6 @@ export default {
           label="Course"
           inputType="text"
           inputName="Insert the Course"
-        />
-        <inputData
-          v-model="gb"
-          label="GB"
-          inputType="text"
-          inputName="Insert GB"
-        />
-        <inputData
-          v-model="bu"
-          label="BU"
-          inputType="text"
-          inputName="Insert BU"
         />
       </div>
       <div className="buttons-area">
