@@ -86,18 +86,6 @@ export default {
           inputType="text"
           inputName="Insert the Course"
         />
-        <inputData
-          v-model="gb"
-          label="GB"
-          inputType="text"
-          inputName="Insert GB"
-        />
-        <inputData
-          v-model="bu"
-          label="BU"
-          inputType="text"
-          inputName="Insert BU"
-        />
       </div>
       <div className="buttons-area">
         <buttonData @click="addCollaborator" btnName="Register" />
