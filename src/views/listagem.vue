@@ -25,7 +25,6 @@ export default {
     
         <div>
         <button class="btn"><i class="fa fa-trash"></i> Del</button>
-        
         <button class="btn"><i class="fa fa-folder"></i> Edit</button>
         </div>
   </div>
